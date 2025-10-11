@@ -3,6 +3,13 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
 
 .fade-in {
   opacity: 0;
