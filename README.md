@@ -1,6 +1,6 @@
 # Raul Oliveira Portfolio
 
-This repository contains my **personal portfolio website**, built with **HTML**, **Tailwind CSS**, and JavaScript.  
+This repository contains my **personal portfolio website**, built with **HTML**, **CSS**, and **JavaScript**.  
 It showcases my **projects**, **technical skills**, and contact information as a **single-page, modern, dark-themed site**.
 
 ## Features
