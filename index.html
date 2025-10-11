@@ -8,92 +8,237 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
   </head>
-  <body class="bg-slate-50 text-gray-800">
+
+  <body class="bg-[#0d1117] text-[#c9d1d9]">
     <!-- Header -->
-    <header class="bg-slate-800 text-white py-8">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl font-bold mb-2">Raul Oliveira</h1>
-        <p class="text-lg text-slate-300">
-          Computer Engineering and Informatics Student — FEUP
-        </p>
-        <p class="text-slate-400 mt-2">
-          <a href="mailto:raulnasoliveira@gmail.com" class="underline">raulnasoliveira@gmail.com</a> |
-          <a href="https://github.com/raulnasoliveira" class="underline" target="_blank">GitHub</a>
-        </p>
-      </div>
+    <header class="bg-[#161b22] py-12 shadow-md text-center">
+      <h1 class="text-5xl font-bold mb-3 text-[#58a6ff]">Raul Oliveira</h1>
+      <p class="text-gray-400 text-lg">
+        Computer Engineering and Informatics Student — FEUP
+      </p>
+      <p class="text-gray-500 mt-3">
+        <a
+          href="mailto:raulnasoliveira@gmail.com"
+          class="underline hover:text-[#58a6ff]"
+          >raulnasoliveira@gmail.com</a
+        >
+        |
+        <a
+          href="https://github.com/raulnasoliveira"
+          class="underline hover:text-[#58a6ff]"
+          target="_blank"
+          >GitHub</a
+        >
+      </p>
     </header>
 
     <!-- About -->
-    <section class="max-w-4xl mx-auto px-6 py-12">
-      <h2 class="text-2xl font-semibold mb-4 text-slate-700">About Me</h2>
-      <p class="text-lg leading-relaxed">
-        I am a third-year student of Informatics and Computing Engineering at FEUP.
-        Passionate about problem-solving, and exploring new technologies,
+    <section
+      id="about"
+      class="max-w-4xl mx-auto px-6 py-16 fade-in text-center"
+    >
+      <h2 class="text-3xl font-semibold mb-6 text-[#58a6ff]">About Me</h2>
+      <p class="text-lg leading-relaxed text-gray-300">
+        I am a third-year student of Informatics and Computing Engineering at
+        FEUP. Passionate about problem-solving and exploring new technologies, I
+        enjoy developing software that blends creativity and functionality.
       </p>
     </section>
 
     <!-- Skills -->
-    <section class="max-w-4xl mx-auto px-6 py-8">
-      <h2 class="text-2xl font-semibold mb-4 text-slate-700">Technical Skills</h2>
-      <ul class="list-disc list-inside text-lg space-y-1">
-        <li>C, C++, Python, Java, JavaScript</li>
-        <li>HTML,CSS</li>
-        <li>Git, GitHub, Linux, VS Code</li>
-      </ul>
+    <section
+      id="skills"
+      class="max-w-4xl mx-auto px-6 py-12 fade-in text-center"
+    >
+      <h2 class="text-3xl font-semibold mb-8 text-[#58a6ff]">
+        Technical Skills
+      </h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span
+          class="bg-[#161b22] px-4 py-2 rounded-full text-gray-300 border border-[#30363d]"
+          >C</span
+        >
+        <span
+          class="bg-[#161b22] px-4 py-2 rounded-full text-gray-300 border border-[#30363d]"
+          >C++</span
+        >
+        <span
+          class="bg-[#161b22] px-4 py-2 rounded-full text-gray-300 border border-[#30363d]"
+          >Python</span
+        >
+        <span
+          class="bg-[#161b22] px-4 py-2 rounded-full text-gray-300 border border-[#30363d]"
+          >Java</span
+        >
+        <span
+          class="bg-[#161b22] px-4 py-2 rounded-full text-gray-300 border border-[#30363d]"
+          >JavaScript</span
+        >
+        <span
+          class="bg-[#161b22] px-4 py-2 rounded-full text-gray-300 border border-[#30363d]"
+          >HTML / CSS</span
+        >
+        <span
+          class="bg-[#161b22] px-4 py-2 rounded-full text-gray-300 border border-[#30363d]"
+          >Git / Linux / VS Code</span
+        >
+      </div>
     </section>
 
     <!-- Projects -->
-    <section class="max-w-4xl mx-auto px-6 py-8">
-      <h2 class="text-2xl font-semibold mb-4 text-slate-700">Projects</h2>
-      <ul class="space-y-3">
-        <li>
-          <a href="https://github.com/raulnasoliveira/FEUP-LCOM-2025" class="underline text-blue-600 font-medium" target="_blank">
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-16 fade-in">
+      <h2 class="text-3xl font-semibold mb-8 text-center text-[#58a6ff]">
+        Projects
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project card -->
+        <div
+          class="bg-[#161b22] p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition"
+        >
+          <h3 class="text-xl text-[#58a6ff] font-semibold mb-2">
             FEUP-LCOM-2025
-          </a>
-          <p class="text-gray-600">Low-level programming and computer architecture project using C.</p>
-        </li>
-        <li>
-          <a href="https://github.com/raulnasoliveira/FEUP-LTW-2025" class="underline text-blue-600 font-medium" target="_blank">
+          </h3>
+          <p class="text-gray-400 mb-3">
+            Low-level programming and computer architecture project using C.
+          </p>
+          <a
+            href="https://github.com/raulnasoliveira/FEUP-LCOM-2025"
+            target="_blank"
+            class="text-[#58a6ff] hover:underline font-medium"
+            >View on GitHub →</a
+          >
+        </div>
+
+        <div
+          class="bg-[#161b22] p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition"
+        >
+          <h3 class="text-xl text-[#58a6ff] font-semibold mb-2">
             FEUP-LTW-2025
-          </a>
-          <p class="text-gray-600">Website using HTML,CSS,PHP and JavaScript.</p>
-        </li>
-        <li>
-          <a href="https://github.com/raulnasoliveira/FEUP-ES-2025" class="underline text-blue-600 font-medium" target="_blank">
-            FEUP-E-2025
-          </a>
-          <p class="text-gray-600">App developed with flutter and learned important skills.</p>
-        </li>
-        <li>
-          <a href="https://github.com/raulnasoliveira/FEUP-DA-2025-1" class="underline text-blue-600 font-medium" target="_blank">
-            FEUP-DA-2025-1
-          </a>
-          <a href="https://github.com/raulnasoliveira/FEUP-DA-2025-2" class="underline text-blue-600 font-medium" target="_blank">
-            FEUP-DA-2025-1
-          </a>
-          <p class="text-gray-600">Two projects about data algorithms using C++.</p>
-        </li>
-        <li>
-          <a href="https://github.com/raulnasoliveira/FEUP-LDTS-2025" class="underline text-blue-600 font-medium" target="_blank">
-            FEUP-E-2025
-          </a>
-          <p class="text-gray-600">Game development using java.</p>
-        </li>
-        <li>
-          <a href="https://github.com/raulnasoliveira/portfolio" class="underline text-blue-600 font-medium" target="_blank">
+          </h3>
+          <p class="text-gray-400 mb-3">
+            Website using HTML, CSS, PHP and JavaScript.
+          </p>
+          <a
+            href="https://github.com/raulnasoliveira/FEUP-LTW-2025"
+            target="_blank"
+            class="text-[#58a6ff] hover:underline font-medium"
+            >View on GitHub →</a
+          >
+        </div>
+
+        <div
+          class="bg-[#161b22] p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition"
+        >
+          <h3 class="text-xl text-[#58a6ff] font-semibold mb-2">
+            FEUP-ES-2025
+          </h3>
+          <p class="text-gray-400 mb-3">
+            App developed with Flutter, focused on software engineering.
+          </p>
+          <a
+            href="https://github.com/raulnasoliveira/FEUP-ES-2025"
+            target="_blank"
+            class="text-[#58a6ff] hover:underline font-medium"
+            >View on GitHub →</a
+          >
+        </div>
+
+        <div
+          class="bg-[#161b22] p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition"
+        >
+          <h3 class="text-xl text-[#58a6ff] font-semibold mb-2">
+            FEUP-DA-2025
+          </h3>
+          <p class="text-gray-400 mb-3">
+            Two projects about data algorithms using C++.
+          </p>
+          <a
+            href="https://github.com/raulnasoliveira/FEUP-DA-2025-1"
+            target="_blank"
+            class="text-[#58a6ff] hover:underline font-medium"
+            >Part 1</a
+          >
+          |
+          <a
+            href="https://github.com/raulnasoliveira/FEUP-DA-2025-2"
+            target="_blank"
+            class="text-[#58a6ff] hover:underline font-medium"
+            >Part 2</a
+          >
+        </div>
+
+        <div
+          class="bg-[#161b22] p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition"
+        >
+          <h3 class="text-xl text-[#58a6ff] font-semibold mb-2">
+            FEUP-LDTS-2025
+          </h3>
+          <p class="text-gray-400 mb-3">Game development using Java.</p>
+          <a
+            href="https://github.com/raulnasoliveira/FEUP-LDTS-2025"
+            target="_blank"
+            class="text-[#58a6ff] hover:underline font-medium"
+            >View on GitHub →</a
+          >
+        </div>
+
+        <div
+          class="bg-[#161b22] p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition"
+        >
+          <h3 class="text-xl text-[#58a6ff] font-semibold mb-2">
             Personal Portfolio
-          </a>
-          <p class="text-gray-600">Portfolio website built with HTML and Tailwind CSS to showcase my work.</p>
-        </li>
-      </ul>
+          </h3>
+          <p class="text-gray-400 mb-3">
+            Portfolio website built with HTML and Tailwind CSS to showcase my
+            work.
+          </p>
+          <a
+            href="https://github.com/raulnasoliveira/portfolio"
+            target="_blank"
+            class="text-[#58a6ff] hover:underline font-medium"
+            >View on GitHub →</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-800 text-white py-6 mt-12">
-      <div class="max-w-4xl mx-auto text-center text-slate-400">
-        <p>© 2025 Raul Oliveira. All rights reserved.</p>
-      </div>
+    <footer class="bg-[#161b22] text-gray-500 py-8 mt-12 text-center">
+      <p>© 2025 Raul Oliveira. All rights reserved.</p>
     </footer>
+
+    <script>
+      // Fade-in animation on scroll
+      const elements = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
